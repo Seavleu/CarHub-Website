@@ -5,11 +5,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
+npm install
+Then
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -17,6 +15,21 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Create from Scracth
+Here are the steps to create Next.js dependencies:
+
+1. Create a new project directory and navigate into it.
+2. Initialize a new Node.js project using the following command
+   
+```bash
+npx create-next-app@latest ./
+```
+3. Run the development server:
+
+```bash
+npm run dev
+```
 
 ## Learn More
 
