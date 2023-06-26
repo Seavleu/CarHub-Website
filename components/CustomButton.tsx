@@ -1,14 +1,19 @@
 // Turn this into a client side , to fix the error
 "user client";
 
-import { CustomButtonProps } from "@/types";
 import React from "react";
+import Image from "next/image";
+import { CustomButtonProps } from "@/types";
+
 
 const CustomButton = ({
   title,
   btnType,
   containerStyles,
   handleClick,
+  textStlyes,
+  rightIcon,
+  isDisabled
 }: CustomButtonProps) => {
   return (
     <button
@@ -20,7 +25,15 @@ const CustomButton = ({
       //  call back function . client side
       onClick={handleClick}
     >
-      <span className={`flex-1`}>{title}</span>
+      <span className={`flex-1 ${textStlyes}`}>{title}</span>
+
+      {rightIcon &&  (
+      <div className="relative w-6 h-6">
+        <Image src={rightIcon} 
+        alt="right icon/"
+        fill
+        className="object-contain" />
+        </div>)}
     </button>
   );
 };
