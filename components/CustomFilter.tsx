@@ -8,10 +8,11 @@ import { Listbox, Transition } from "@headlessui/react";
 import { CustomFilterProps } from "@/types";
 import { updateSearchParams } from "@/utils";
 
-const CustomFilter = ({ title, options }: CustomFilterProps) => {
-  const [selected, setSelected] = useState(options[0]);
+const CustomFilter = ({ title, options, setFilter }: CustomFilterProps) => {
+  const [selected, setSelected] = useState(options[0]); // State for storing the selected option
   const router = useRouter();
 
+  // update the URL search parameters and navigate to the new URL
   const handleUpdateParams = (e: { title: string; value: string }) => {
     const newPathName = updateSearchParams(title, e.value.toLowerCase());
 
@@ -29,7 +30,7 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
       >
         <div className="relative w-fit z-10">
           {/* Button for the listbox */}
-          <Listbox.Button className="cutom-filter__btn">
+          <Listbox.Button className="custom-filter__btn">
             <span className="block truncate">{selected.title}</span>
             <Image
               src="/chevron-up-down.svg"
@@ -52,7 +53,7 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
                 <Listbox.Option
                   key={option.title}
                   className={({ active }) =>
-                    `relative cursor-default select-none py-2 px-4 ${
+                    `relative cursor-default select-none py-2 pl-10 px-4 ${
                       active ? "bg-primary-blue text-white" : "text-gray-900"
                     }`
                   }

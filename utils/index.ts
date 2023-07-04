@@ -2,6 +2,7 @@ import { CarProps, FilterProps} from "@/types";
 import { manufacturers } from '../constants/index';
 
 export async function fetchCars(filters: FilterProps) {
+  // To modify the new path name parameter --> API respond
   const {manufacturer, year, model, limit, fuel } = filters;
     const headers = {
     "X-RapidAPI-Key": "b8d65d9e72msh090beab34cfff6bp1716a5jsna78bd864b9bd",

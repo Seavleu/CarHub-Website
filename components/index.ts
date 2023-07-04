@@ -10,6 +10,7 @@ import CustomFilter from './CustomFilter';
 import SearchManufacturer from './SearchManufacturer';
 import CarCard from '@/components/CarCard';
 import CarDetails from './CarDetails';
+import ShowMore from './ShowMore';
 
 
 export {
@@ -22,4 +23,5 @@ export {
   SearchManufacturer,
   CarCard,
   CarDetails,
+  ShowMore,
 };

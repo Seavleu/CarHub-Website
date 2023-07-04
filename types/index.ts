@@ -14,14 +14,15 @@ export interface CustomButtonProps{
 }
 
 export interface SearchManufacturerProps{
-    manufacturer: string;
+    selected: string;
     // take string and return nothing
-    setManufacturer: (manufacturer: string) =>void;
+    setSelected: (manufacturer: string) =>void;
 }
 
-export interface CustomFilterProps{
-    title : string;
-    options: OptionProps[]; // have an array of title-value pairs
+export interface CustomFilterProps {
+  title: string;
+  options: OptionProps[]; // have an array of title-value pairs
+  setFilter: string;
 }
 
 export interface OptionProps{
@@ -50,4 +51,10 @@ export interface FilterProps{
     fuel: string,
     limit: number,
     model: string,
+}
+
+export interface showMoreProps {
+  pageNumber: number;
+  isNext: boolean;
+  setLimit: number;
 }
